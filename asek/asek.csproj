@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD7B5D4D-0D0D-4E6E-A389-926C8ABCBA3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>asek</RootNamespace>
+    <AssemblyName>asek</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLaporan.Designer.cs">
+      <DependentUpon>AdminLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminUser.Designer.cs">
+      <DependentUpon>AdminUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLog.Designer.cs">
+      <DependentUpon>AdminLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InputUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\InputUser.Designer.cs">
+      <DependentUpon>InputUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gudang\GudangProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gudang\GudangProduk.Designer.cs">
+      <DependentUpon>GudangProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gudang\InputProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gudang\InputProduk.Designer.cs">
+      <DependentUpon>InputProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\InputJumlah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\InputJumlah.Designer.cs">
+      <DependentUpon>InputJumlah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\KasirStruk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\KasirStruk.Designer.cs">
+      <DependentUpon>KasirStruk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\KasirTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\KasirTransaksi.Designer.cs">
+      <DependentUpon>KasirTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Properti.cs" />
+    <Compile Include="Model\ModelDetailTransaksi.cs" />
+    <Compile Include="Model\ModelLaporan.cs" />
+    <Compile Include="Model\ModelLog.cs" />
+    <Compile Include="Model\ModelPelanggan.cs" />
+    <Compile Include="Model\ModelProduk.cs" />
+    <Compile Include="Model\ModelTransaksi.cs" />
+    <Compile Include="Model\ModelUsers.cs" />
+    <Compile Include="Main\Navigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Navigation.Designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\blank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\blank.Designer.cs">
+      <DependentUpon>blank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Koneksi.cs" />
+    <Compile Include="Main\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\AdminLaporan.resx">
+      <DependentUpon>AdminLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminUser.resx">
+      <DependentUpon>AdminUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminLog.resx">
+      <DependentUpon>AdminLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\InputUser.resx">
+      <DependentUpon>InputUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gudang\GudangProduk.resx">
+      <DependentUpon>GudangProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gudang\InputProduk.resx">
+      <DependentUpon>InputProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\InputJumlah.resx">
+      <DependentUpon>InputJumlah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\KasirStruk.resx">
+      <DependentUpon>KasirStruk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\KasirTransaksi.resx">
+      <DependentUpon>KasirTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Navigation.resx">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\blank.resx">
+      <DependentUpon>blank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
